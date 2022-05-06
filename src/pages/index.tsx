@@ -16,6 +16,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import type { NextPage } from 'next'
 import { Fragment } from 'react'
+import { Hero } from '@/components/Hero'
 
 const features = [
   {
@@ -98,11 +99,7 @@ const Home: NextPage = () => {
             <div className='flex justify-start lg:w-0 lg:flex-1'>
               <a href='#'>
                 <span className='sr-only'>Workflow</span>
-                <img
-                  className='h-8 w-auto sm:h-10'
-                  src='./avator.png'
-                  alt=''
-                />
+                <img className='h-8 w-auto sm:h-10' src='./avator.png' alt='' />
               </a>
             </div>
             <div className='-mr-2 -my-2 md:hidden'>
@@ -377,37 +374,9 @@ const Home: NextPage = () => {
             </div>
           </Popover.Panel>
         </Transition>
-      </Popover>
 
-      <main className='lg:relative'>
-        <div className='mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left'>
-          <div className='px-4 lg:w-1/2 sm:px-8 xl:pr-16'>
-            <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl'>
-              <span className='block xl:inline'>Demo site</span><br />
-              <span className='block text-emerald-600 xl:inline'>cafe ticket letter</span>
-            </h1>
-            <p className='mt-3 max-w-md mx-auto text-2xl text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl'>
-              カフェ教えるよ
-            </p>
-            <div className='mt-10 sm:flex sm:justify-center lg:justify-start'>
-              <div className='mt-3 rounded-md shadow sm:mt-0'>
-                <button
-                  className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-emerald-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10'
-                >
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full'>
-          <img
-            className='absolute inset-0 w-full h-full object-cover'
-            src='./coffee.jpg'
-            alt=''
-          />
-        </div>
-      </main>
+        <Hero />
+      </Popover>
     </div>
   )
 }
