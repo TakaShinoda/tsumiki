@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model User {
+  id      Int   @default(autoincrement()) @id
+  name    String @db.VarChar(255)
+  adress    String @db.VarChar(255)
+  email   String @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}
